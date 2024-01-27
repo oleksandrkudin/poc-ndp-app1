@@ -12,6 +12,9 @@ on:
       next_environment:
         type: string
         required: false
+      deployment_statuses:
+        type: string
+        required: true
 
 permissions:
   contents: write
@@ -26,3 +29,4 @@ jobs:
       release_version: ${{ inputs.release_version }}
       environment: ${{ inputs.environment }}
       next_environment: ${{ inputs.next_environment }}
+      deployment_statuses: ${{ inputs.deployment_statuses }}
