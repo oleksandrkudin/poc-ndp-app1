@@ -19,10 +19,10 @@ permissions:
 
 jobs:
   deploy:
-    if: ${{ inputs.next_environment != '' }}
     secrets: inherit
-    uses: oleksandrkudin/poc-ndp-workflows/.github/workflows/update_environment.yaml@main
+    uses: oleksandrkudin/poc-ndp-workflows/.github/workflows/null_deploy.yaml@main
     with:
       unit: "poc-ndp-app1"
       release_version: ${{ inputs.release_version }}
       environment: ${{ inputs.environment }}
+      next_environment: ${{ inputs.next_environment }}
